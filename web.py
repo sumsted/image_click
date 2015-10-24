@@ -14,12 +14,6 @@ def get_image():
 
 @post('/image')
 def post_message():
-    try:
-        message = request.json
-        if message is None:
-            message = {'user': 'echo', 'message': 'Huh, say something?'}
-    except Exception as e:
-        message = {'user': 'echo', 'message': 'Huh, what?'}
     return {'status': 'SUCCESS'}
 
 @route('/static/<filepath:path>')
